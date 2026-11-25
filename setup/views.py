@@ -6,7 +6,6 @@ def homepage(request):
         'idade': '30',
         'cidade': 'São Paulo'
     }
-
     return render(request, 'home.html', {'nome': nome, 'pessoa': pessoa})
 
 def about (request):
