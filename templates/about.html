@@ -7,7 +7,14 @@
 </head>
 <body>
     <h2>About</h2>
-    <hr>
-    <p>Acesse a página <a href="/">Home</a></p>
+        <p>Acesse a página <a href="/">Home</a></p>
+        <hr>
+        <ol>
+            {% for fruta in frutas %}
+                <li>{{fruta}}</li>
+            {% endfor %}
+        </ol>
+        <hr>
+
 </body>
 </html>
