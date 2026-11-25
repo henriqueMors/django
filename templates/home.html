@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 {% load static %}
-
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,20 +9,11 @@
 </head>
 <body>
     <h2>Home</h2>
-        <p>Acesse a página <a href="/about">about</a></p>
+    <p>Acesse a página <a href="{% url 'about' %}">About</a></p>
     <hr>
-    <h3>
-        informações da Pessoa:
-    </h3>
-    <p>
-        nome: {{pessoa.nome}}
-    </p>
-    <p>
-        idade: {{pessoa.idade}}
-    </p>
-    <p>
-        cidade: {{pessoa.cidade}}
-    </p>
-
+    <h3>Informações da Pessoa:</h3>
+    <p>Nome: {{ pessoa.nome }}</p>
+    <p>Idade: {{ pessoa.idade }}</p>
+    <p>Cidade: {{ pessoa.cidade }}</p>
 </body>
 </html>

@@ -1,18 +1,15 @@
 from django.shortcuts import render
-def homepage(request):
-    nome = "Fulano"
-    pessoa = {
-        'nome': 'Maria',
-        'idade': '30',
-        'cidade': 'São Paulo'
-    }
-    return render(request, 'home.html', {'nome': nome, 'pessoa': pessoa})
 
-def about (request):
-    frutas = [
-        'Maçã',
-        'Banana',
-        'Laranja',
-        'Uva',
-    ]
-    return render(request, 'about.html', {'frutas':frutas})
+
+def home(request):
+    pessoa = {
+        "nome": "Ana",
+        "idade": 30,
+        "cidade": "São Paulo",
+    }
+    return render(request, "home.html", {"pessoa": pessoa})
+
+
+def about(request):
+    frutas = ["maçã", "banana", "uva", "laranja"]
+    return render(request, "about.html", {"frutas": frutas})

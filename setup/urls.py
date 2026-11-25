@@ -1,9 +1,11 @@
 from django.contrib import admin
 from django.urls import path
-from .views import homepage, about
+
+from . import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', homepage),
-    path('about', about)
+    path("admin/", admin.site.urls),
+    path("", views.home, name="home"),
+    path("about/", views.about, name="about"),
+    path("products/", include("products.urls")),   # ← encaminha para o app
 ]
